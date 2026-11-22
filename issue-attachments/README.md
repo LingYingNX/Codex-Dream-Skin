@@ -36,8 +36,8 @@ the `:has()` branch is irrelevant to the breakage.
 
 | | popover host `backdrop-filter` | card `backdrop-filter` | card rect |
 |---|---|---|---|
-| before | `blur(24px)` | `none` | `[2, 0, 336, 226]` ← stuck at viewport origin |
-| after | `none` | `blur(24px)` | `[291, 197, 336, 130]` ← anchored to the row |
+| before | `blur(24px)` | `none` | `[2, 0, 336, 226]` — stuck at viewport origin |
+| after | `none` | `blur(24px)` | `[291, 197, 336, 130]` — anchored to the row |
 
 `position-anchor` stays `--native-popover-_r_…` in both cases; only the
 containing block changed.
@@ -59,7 +59,7 @@ The selector must mirror Dream Skin's own condition (`data-dream-upload-alpha`
 included) — otherwise specificity ties and the result depends on stylesheet
 order, which makes the fix work only intermittently.
 
-## Screenshots
+## Files
 
-- `before-hover.png` — card stuck at the top-left of the window
-- `after-hover.png` — card correctly anchored next to the hovered project row
+- `fix-dream-skin-popover-anchor.js` — the workaround (Codex++ user script)
+- `screenshot-1-report.png`, `screenshot-2-report.png` — screenshots from the report
